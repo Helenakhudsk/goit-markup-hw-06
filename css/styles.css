@@ -557,8 +557,8 @@ img{
         margin-left: auto;
     }
     .title-lab{
-        width: 75px;
-        height: 24px;
+        /* width: 75px;
+        height: 24px; */
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -586,9 +586,6 @@ img{
     .footer-sub-form{
         display: flex;
     }
-    .footer-sub-icon{
-        position: relative;
-    }
     .footer_buttom{
         display: flex;
         align-items: center;
@@ -608,11 +605,8 @@ img{
         cursor: pointer;
      }
      .subscribe_icon{
-        position: absolute;
-        right: 24px;
-        top: 50%;
-        transform: translateY(-50%);
-        fill: var(--white)
+        fill: var(--white);
+        margin-left: 16px;
      }
 
     /*------------ Modil-------------- */
@@ -628,12 +622,11 @@ img{
     .modal{ 
         position: absolute;
         width: 408px;
-        min-height: 584px;
         background-color: var(--white);
         border-radius: 4px;
         top: 50%;
         left: 50%;
-        padding: 24px 24px;
+        padding: 72px 24px 24px 24px;
         transform: translate(-50%, -50%) scale(1);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -645,6 +638,7 @@ img{
         display: flex;
         justify-content: center;
         align-items: center;
+        top: 24px;
         width: 24px;
         height: 24px;
         right: 24px;
@@ -659,24 +653,26 @@ img{
         fill: var(--accent-color);
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .close-icom:active{
+    .close-icom:hover{
         background-color: var(--hover-fokus-color);
     }
-    .close-icom:active .close{
+    .close-icom:hover .close{
         fill: var(--white);
     }
-    .mobile_title{
+    .modal_title{
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         text-align: center;
-        margin-top: 48px;
         margin-bottom: 16px;
+        stroke: #000000;
     }
     .mobile_input{
         width: 100%;
         height: 40px;
         border: 1px solid var(--light-gray);
+        margin-top: 4px;
+        margin-bottom: 8px;
         border-radius: 4px;
         padding-left: 38px;
         fill: transparent;
@@ -694,8 +690,6 @@ img{
         font-weight: 400;
         font-size: 12px;
         line-height: 1.16;
-        margin-top: 8px;
-        margin-bottom: 4px;
         color: var(--light-gray);
     }
     .input_wrap{
@@ -745,9 +739,11 @@ img{
             margin-top: 10px;
             font-weight: 400;
             font-size: 12px;
-            line-height: 1.16;
+            line-height: 1.17;
+            letter-spacing: 0.04em;
             color: var(--light-gray);
             gap: 8px;
+
         }
         .input_agreement span{
             display: flex;
@@ -758,12 +754,12 @@ img{
             border-radius: 2px;
             border: 1px solid rgba(46, 47, 66, 0.4);
             fill: transparent;
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         .privacy-policy{
             font-weight: 400;
             font-size: 12px;
-            line-height: 1.16;
+            line-height: 1.17;
             color: var(--title-text-color);
         }
         .mobile_check:checked + .input_agreement span{
@@ -784,17 +780,19 @@ img{
         letter-spacing: 0.04em;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 48px;
+        margin-top: 24px;
         width: 169px;
         height: 56px;
-        padding-left: auto; 
-        padding-right: auto;
         border: none;
         border-radius: 4px;
         color: var(--white);
         background: var(--title-text-color);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .mobile_buttom:hover{
+        background-color: var(--hover-fokus-color);
     }
     .is-hidden{
         opacity: 0;
